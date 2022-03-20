@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorteio.com</title>
+
+    <script>
+
+        function sorteio(){
+            let NumPessoas = document.getElementById("qntd").value;
+
+            let NumSorteado = Math.round(Math.random() * NumPessoas)
+
+            document.getElementById("resultado").innerHTML = NumSorteado
+        }
+        
+    </script>
+
+
+</head>
+
+<body>
+    
+    <div class="content">
+        <h1>Sorteio.com</h1>
+        <p>Click para sortear um número!</p>
+
+        <h3>Sortear até: </h3>
+        <input type="number" name="Pessoas" id="qntd">
+
+        <h2 id="resultado"></h2>
+
+        <button onclick="sorteio()">SORTEAR</button>
+    </div>
+</body>
+</html>
