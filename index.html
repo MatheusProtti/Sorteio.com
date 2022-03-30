@@ -5,35 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>Sorteio.com</title>
-
-    <script>
-
-        function sorteio(){
-            let NumPessoas = document.getElementById("qntd").value;
-
-            let NumSorteado = Math.round(Math.random() * NumPessoas)
-
-            document.getElementById("resultado").innerHTML = NumSorteado
-        }
-        
-    </script>
-
-
 </head>
 
 <body>
-    
-    <div class="content">
+    <div id="content">
+        <div class="inicio">
+            <h1>Sorteio.com</h1>
+            <h2>O que você gostaria de sortear</h2>
+        </div>
+        <div class="botoes">
+            <button id="numero">Números</button>
+            <button id="nome">Nomes</button>
+        </div>
+    </div>
+
+<!--Só será ativado se o botao dos Números for ativado-->
+    <div id="sortNumero">
         <h1>Sorteio.com</h1>
-        <p>Click para sortear um número!</p>
+        <p style="font-size: 20px;">Click para sortear um número!</p>
 
         <h3>Sortear até: </h3>
-        <input type="number" name="Pessoas" id="qntd">
+        <input type="number" name="number" id="qntd">
 
-        <h2 id="resultado"></h2>
+        <h2 id="resultadoSortNum"></h2>
 
-        <button onclick="sorteio()">SORTEAR</button>
+        <button id="botaoSortNum" onclick="sorteio()">SORTEAR</button>
+        <div class="botaoVoltar">
+            <button id="voltar">Voltar</button>
+        </div>
+    </div>
+    
+<!--Só será ativado se o botao dos Nomes for ativado-->
+    <div id="sortNome">
+        <h1>Sorteio.com</h1>
+        <p style="font-size: 25px;">Escreva os nomes dos participantes</p>
+        <input id="pegarNomes" type="text" placeholder="Nomes">
+        <div class="botaoAdicRemov">
+            <button id="adicionar" onclick="criarPessoas()">Adicionar</button>
+            <button id="remover" onclick="removerPessoas()">Remover</button> <!--Função remover não está dando certo ver dps q q deu-->
+
+            <ul id="lista"> 
+            </ul>
+            
+            <h2 id="resutadoNome"></h2>
+        </div>
+        <div class="botaoSortPessoas">
+            <button id="sortear" onclick="sortearNome()">Sortear</button>
+        </div>
+        <button id="voltarDois">Voltar</button>
     </div>
 </body>
 </html>

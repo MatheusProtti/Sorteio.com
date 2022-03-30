@@ -8,14 +8,49 @@ body{
     background-color: burlywood;
     display: flex;
     justify-content: center;
-    padding-top: 20%;
+    padding-top: 15%;
 }
 
-.content{
-    background: rgba(0, 0, 0, 0.4);
+#content{
     width: 400px;
-    height: 200px;
+    height: 300px;
     text-align: center;
+    
+}
+
+#nome{
+    height: 60px;
+    width: 150px;
+    font-size: 35px;
+    border-radius: 20px;
+    border: 1px solid;
+    
+}
+
+#numero{
+    height: 60px;
+    width: 150px;
+    font-size: 35px;
+    border-radius: 20px;
+    border: 1px solid;
+    
+}
+
+.inicio{
+    padding-bottom: 50px;
+}
+
+#nome:hover {
+    background-color: burlywood;
+}
+
+#numero:hover {
+    background-color: burlywood;
+}
+
+#sortNumero{
+    text-align: center;
+    display: none;
 }
 
 h3, qntd{
@@ -24,8 +59,61 @@ h3, qntd{
 
 #qntd{
     max-width: 40px;
+
 }
 
 h1, p, h3, qntd, h2{
     padding-bottom: 25px;
+}
+
+#botaoSortNum, #adicionar, #remover, #sortear{
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid;
+    margin-bottom: 50px;
+}
+
+#voltar, #voltarDois{
+    width: 39px;
+    height: 30px;
+}
+
+#sortNome{
+    display: none;
+    text-align: center;
+}
+
+#adicionar{
+    display: inline-block;
+}
+
+#remover{
+    display: inline-block;
+}
+
+#sortear{
+    display: block;
+
+}
+
+.botaoAdicRemov{
+    padding-bottom: 15px;
+}
+
+.botaoSortPessoas{
+    display: flex;
+    justify-content: center;
+}
+
+#pegarNomes{
+    margin-bottom: 30px;
+    height: 30px;
+}
+
+#lista{
+list-style: none;
+padding-bottom: 15px;
+font-size: 22px;
 }
